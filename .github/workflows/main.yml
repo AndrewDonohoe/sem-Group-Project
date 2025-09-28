@@ -19,5 +19,3 @@ jobs:
         run: docker build -t se_methods .
       - name: Run image
         run: docker run --name devopscontainer se_methods
-      - name: view logs
-        run: docker logs devopscontainer
