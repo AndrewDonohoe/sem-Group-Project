@@ -18,7 +18,7 @@
 - Create Tests
 - Release
 
-## Code of Conduct
+## Code of Conduct:
 - Be on time
 - Try your best
 - Motivate others
