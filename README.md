@@ -25,3 +25,5 @@
 - Be present at every meeting
 - Equal share of work
 
+
+
