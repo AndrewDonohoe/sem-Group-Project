@@ -17,6 +17,13 @@
 - Create Methods To Create the Reports The Organistation Has Asked For
 - Create Tests
 - Release
+- Project integrated with zube.io
+- Kanban/Project Board created and used 
+- Sprint boards created and being used 
+- Use Case diagram created 
+- Full use cases defined 
+- Issues being used on GitHub 
+- Tasks defined as user stories 
 
 ## Code of Conduct:
 - Be on time
