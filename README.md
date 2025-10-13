@@ -25,12 +25,7 @@
 - Issues being used on GitHub 
 - Tasks defined as user stories 
 
-## Code of Conduct:
-- Be on time
-- Try your best
-- Motivate others
-- Be present at every meeting
-- Equal share of work
+
 
 
 
