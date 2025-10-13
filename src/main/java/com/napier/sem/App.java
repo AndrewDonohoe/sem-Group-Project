@@ -1,3 +1,7 @@
+/*
+Basic hello world program
+ */
+
 package com.napier.sem;
 
 public class App
