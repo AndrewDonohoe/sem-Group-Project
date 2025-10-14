@@ -1,0 +1,55 @@
+@startuml
+
+actor Employee as "Employee"
+
+rectangle Database
+
+rectangle "Population System" {
+    usecase UC1 as "Get countries in
+    a specific area"
+    usecase UC2 as "Get top N populated
+    countries in a specific area"
+    usecase UC3 as "Get cities in
+    a specific area"
+    usecase UC4 as "Get top N populated
+    cities in a specific area"
+    usecase UC5 as "Get capital cities in
+    a specific area"
+    usecase UC6 as "Get top N populated
+    capital cities in a specific area"
+    usecase UC7 as "Get population of people
+    in and out of cities in a specific area"
+    usecase UC8 as "Get number of people who
+    speak a certain language and percentage"
+
+    usecase UCa as "Order by largest
+    population to smallest"
+
+    Employee - UC1
+    Employee - UC2
+    Employee - UC3
+    Employee - UC4
+    Employee - UC5
+    Employee - UC6
+    Employee - UC7
+    Employee - UC8
+
+    UC1 - Database
+    UC2 - Database
+    UC3 - Database
+    UC4 - Database
+    UC5 - Database
+    UC6 - Database
+    UC7 - Database
+    UC8 - Database
+
+    UC1 ..> UCa
+    UC2 ..> UCa
+    UC3 ..> UCa
+    UC4 ..> UCa
+    UC5 ..> UCa
+    UC6 ..> UCa
+    UC8 ..> UCa
+}
+
+@enduml
