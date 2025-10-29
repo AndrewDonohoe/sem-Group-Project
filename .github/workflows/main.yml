@@ -15,7 +15,5 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn package
-      - name: Build
-        run: docker build -t se_methods .
-      - name: Run image
-        run: docker run --name devopscontainer se_methods
+      - name: Run Docker Compose
+        run: docker compose up
