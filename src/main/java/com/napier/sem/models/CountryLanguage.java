@@ -30,4 +30,14 @@ public class CountryLanguage {
         return percentage;
     }
 
+    @Override
+    public String toString() {
+        return "CountryLanguage{" +
+                "countryCode='" + countyCode + '\'' +
+                ", language='" + language + '\'' +
+                ", isOfficial=" + isOfficial +
+                ", percentage=" + percentage +
+                '}';
+    }
+
 }

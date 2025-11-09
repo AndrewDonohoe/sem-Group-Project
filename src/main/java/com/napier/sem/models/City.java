@@ -21,6 +21,14 @@ public class City {
         return countryCode;
     }
 
-
+    @Override
+    public String toString() {
+        return "City{" +
+                "name='" + name + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", district='" + district + '\'' +
+                ", population=" + population +
+                '}';
+    }
 
 }
