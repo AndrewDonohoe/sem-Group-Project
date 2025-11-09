@@ -77,6 +77,7 @@ public class App
                 SqlQueries.exampleQuery,
                 res -> {
                     try {
+                        if (!res.next()) return null; // move to first row
                         return new City(
                                 res.getString("Name"),
                                 res.getString("CountryCode"),
