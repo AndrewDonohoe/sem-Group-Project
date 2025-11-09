@@ -4,6 +4,10 @@ Basic hello world program
 
 package com.napier.sem;
 
+import com.napier.sem.db.Database;
+import com.napier.sem.db.SqlQueries;
+import com.napier.sem.models.City;
+
 import java.sql.*;
 
 public class App
@@ -62,5 +66,29 @@ public class App
                 System.out.println("Error closing connection to database");
             }
         }
+
+        Database db = new Database(
+                "jdbc:mysql://db:3306/world?useSSL=false&allowPublicKeyRetrieval=true",
+                "root",
+                "example"
+        );
+
+        City resultCity = db.executeQuery(
+                SqlQueries.exampleQuery,
+                res -> {
+                    try {
+                        return new City(
+                                res.getString("Name"),
+                                res.getString("CountryCode"),
+                                res.getString("District"),
+                                res.getInt("Population")
+                        );
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+        System.out.println(resultCity);
+
     }
 }
