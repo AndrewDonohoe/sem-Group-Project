@@ -41,4 +41,16 @@ public class Country {
     public Integer getCapital() {
         return capital;
     }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", continent='" + continent + '\'' +
+                ", region='" + region + '\'' +
+                ", population=" + population +
+                ", capital=" + capital +
+                '}';
+    }
 }
