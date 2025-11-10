@@ -8,8 +8,8 @@ FROM country AS c
     SELECT ci.CountryCode,
            SUM(ci.Population) AS sum_city_pop
     FROM city AS ci
-    GROUP BY ci.CountryCode) AS city_pop
-             ON city_pop.CountryCode = c.Code
+    GROUP BY ci.CountryCode) AS city_pop ON city_pop.CountryCode = c.Code
+WHERE c.Code IN ('GBR','NOR','SWE','PER','COL')
 GROUP BY c.Continent
 ORDER BY total_population DESC;
 
@@ -20,13 +20,13 @@ SELECT
     SUM(COALESCE(city_pop.sum_city_pop,0)) AS population_in_cities,
     SUM(c.Population) - SUM(COALESCE(city_pop.sum_city_pop, 0)) AS population_not_in_cities
 FROM country AS c
-LEFT JOIN(
+         LEFT JOIN(
     SELECT
         ci.CountryCode, SUM(ci.Population) AS sum_city_pop
     FROM city AS ci
     GROUP BY ci.CountryCode
-) AS city_pop
-ON city_pop.CountryCode = c.Code
+) AS city_pop ON city_pop.CountryCode = c.Code
+WHERE c.Code IN ('GBR','NOR','SWE')
 GROUP BY c.Region
 ORDER BY total_population DESC;
 
@@ -39,11 +39,10 @@ SELECT c.Code,
        COALESCE(city_pop.sum_city_pop,0) AS population_in_cities,
        c.Population - COALESCE(city_pop.sum_city_pop, 0) AS population_not_in_cities
 FROM country AS c
-LEFT JOIN(
+         LEFT JOIN(
     SELECT ci.CountryCode, SUM(ci.Population) AS sum_city_pop
     FROM city AS ci
     GROUP BY ci.CountryCode
-) AS city_pop
-ON city_pop.CountryCode = c.Code
+) AS city_pop ON city_pop.CountryCode = c.Code
+WHERE c.Code IN ('NOR','GBR','COL','PER','SWE')
 ORDER BY total_population DESC;
-
