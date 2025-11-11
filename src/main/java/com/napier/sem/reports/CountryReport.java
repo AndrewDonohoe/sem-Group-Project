@@ -14,7 +14,7 @@ public class CountryReport {
         return null;
     }
 
-    public String countriesInContinentSmallestToLargest() {
+    public String countriesInContinentSmallestToLargest(String continent) {
         return null;
     }
 
