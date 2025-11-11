@@ -1,6 +1,6 @@
-package com.napier.sem.reports;
+package com.napier.sem.integrationTests;
 
-public class CountryReport {
+public class CountryReportTest {
     public String countriesInWorldLargestToSmallest() {
         return null;
     }

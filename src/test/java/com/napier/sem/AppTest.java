@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
     @Test
-    void unitTest()
+    public void unitTest()
     {
         assertEquals(5, 5);
     }

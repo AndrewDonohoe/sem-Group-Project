@@ -1,25 +1,27 @@
 package com.napier.sem.reports;
 
 public class CapitalCityReport {
-    public void capitalCitiesInWorldLargestToSmallest() {
+    public String capitalCitiesInWorldLargestToSmallest() {
+        return null;
     }
 
-    public void capitalCitiesInContinentSmallestToLargest() {
+    public String capitalCitiesInContinentSmallestToLargest() {
+        return null;
     }
 
-    public void capitalCitiesInRegionSmallestToLargest() {
-
+    public String capitalCitiesInRegionSmallestToLargest() {
+        return null;
     }
 
-    public void topPopulatedCapitalCitiesInWorld(int n) {
-
+    public String topPopulatedCapitalCitiesInWorld(int n) {
+        return null;
     }
 
-    public void topPopulatedCapitalCitiesInContinent(int n) {
-
+    public String topPopulatedCapitalCitiesInContinent(int n) {
+        return null;
     }
 
-    public void topPopulatedCapitalCitiesInRegion(int n) {
-
+    public String topPopulatedCapitalCitiesInRegion(int n) {
+        return null;
     }
 }

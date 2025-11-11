@@ -1,6 +1,6 @@
-package com.napier.sem.reports;
+package com.napier.sem.integrationTests;
 
-public class CityReport {
+public class CityReportTest {
     public String citiesInWorldLargestToSmallest() {
         return null;
     }

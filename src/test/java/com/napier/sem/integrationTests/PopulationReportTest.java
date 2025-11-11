@@ -1,6 +1,6 @@
-package com.napier.sem.reports;
+package com.napier.sem.integrationTests;
 
-public class PopulationReport {
+public class PopulationReportTest {
     public String populationOfPeopleInAndOutOfCitiesInEachContinent() {
         return null;
     }
