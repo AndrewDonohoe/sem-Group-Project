@@ -7,6 +7,7 @@ package com.napier.sem;
 import com.napier.sem.db.Database;
 import com.napier.sem.db.SqlQueries;
 import com.napier.sem.models.City;
+import com.napier.sem.reports.CountryReport;
 import com.napier.sem.reports.PopulationReport;
 
 import java.sql.*;
@@ -97,6 +98,11 @@ public class App
         String result = populationReport.populationOfPeopleInAndOutOfCitiesInEachContinent();
         System.out.println("Population in and out of cities per continent output: ");
         System.out.println(result);
+
+        CountryReport countryReport = new CountryReport(db);
+        String countryReportResult = countryReport.countriesInContinentSmallestToLargest("South America");
+        System.out.println("Country in south america report output: ");
+        System.out.println(countryReportResult);
 
     }
 }
