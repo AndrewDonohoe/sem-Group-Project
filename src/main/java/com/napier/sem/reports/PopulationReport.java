@@ -1,6 +1,15 @@
 package com.napier.sem.reports;
 
+import com.napier.sem.db.DatabaseInterface;
+
 public class PopulationReport {
+
+    private final DatabaseInterface database;
+
+    public PopulationReport(DatabaseInterface database){
+        this.database = database;
+    }
+
     public String populationOfPeopleInAndOutOfCitiesInEachContinent() {
         return null;
     }
