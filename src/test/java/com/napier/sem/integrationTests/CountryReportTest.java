@@ -1,27 +1,35 @@
 package com.napier.sem.integrationTests;
 
+import org.junit.jupiter.api.Test;
+
 public class CountryReportTest {
-    public String countriesInWorldLargestToSmallest() {
-        return null;
+    @Test
+    public void testCountriesInWorldLargestToSmallest() {
+
     }
 
-    public String countriesInContinentSmallestToLargest() {
-        return null;
+    @Test
+    public void testCountriesInContinentSmallestToLargest() {
+
     }
 
-    public String countriesInRegionSmallestToLargest() {
-        return null;
+    @Test
+    public void testCountriesInRegionSmallestToLargest() {
+
     }
 
-    public String topPopulatedCountriesInWorld(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCountriesInWorld() {
+
     }
 
-    public String topPopulatedCountriesInContinent(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCountriesInContinent() {
+
     }
 
-    public String topPopulatedCountriesInRegion(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCountriesInRegion() {
+
     }
 }

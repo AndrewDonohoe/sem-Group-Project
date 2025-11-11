@@ -1,44 +1,47 @@
 package com.napier.sem.integrationTests;
 
+import org.junit.jupiter.api.Test;
+
 public class CityReportTest {
-    public String citiesInWorldLargestToSmallest() {
-        return null;
+    @Test
+    public void testCitiesInWorldLargestToSmallest() {
     }
 
-    public String citiesInContinentSmallestToLargest() {
-        return null;
+    @Test
+    public void testCitiesInContinentSmallestToLargest() {
     }
 
-    public String citiesInRegionSmallestToLargest() {
-        return null;
+    @Test
+    public void testCitiesInRegionSmallestToLargest() {
     }
 
-    public String citiesInCountrySmallestToLargest() {
-        return null;
+    @Test
+    public void testCitiesInCountrySmallestToLargest() {
     }
 
-    public String citiesInDistrictLargestToLargest() {
-        return null;
+    @Test
+    public void testCitiesInDistrictLargestToLargest() {
     }
 
-    public String topPopulatedCitiesInWorld(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCitiesInWorld() {
     }
 
-    public String topPopulatedCitiesInContinent(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCitiesInContinent() {
 
     }
 
-    public String topPopulatedCitiesInRegion(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCitiesInRegion() {
     }
 
-    public String topPopulatedCitiesInCountry(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCitiesInCountry() {
     }
 
-    public String topPopulatedCitiesInDistrict(int n) {
-        return null;
+    @Test
+    public void testTopPopulatedCitiesInDistrict() {
     }
+
 }
