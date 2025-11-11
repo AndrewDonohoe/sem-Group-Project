@@ -90,10 +90,12 @@ public class App
                     }
                 });
 
+        System.out.println("Example Query Output: ");
         System.out.println(resultCity);
 
         PopulationReport populationReport = new PopulationReport(db);
         String result = populationReport.populationOfPeopleInAndOutOfCitiesInEachContinent();
+        System.out.println("Population in and out of cities per continent output: ");
         System.out.println(result);
 
     }
