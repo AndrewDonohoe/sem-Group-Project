@@ -7,6 +7,7 @@ package com.napier.sem;
 import com.napier.sem.db.Database;
 import com.napier.sem.db.SqlQueries;
 import com.napier.sem.models.City;
+import com.napier.sem.reports.PopulationReport;
 
 import java.sql.*;
 
@@ -90,6 +91,10 @@ public class App
                 });
 
         System.out.println(resultCity);
+
+        PopulationReport populationReport = new PopulationReport(db);
+        String result = populationReport.populationOfPeopleInAndOutOfCitiesInEachContinent();
+        System.out.println(result);
 
     }
 }

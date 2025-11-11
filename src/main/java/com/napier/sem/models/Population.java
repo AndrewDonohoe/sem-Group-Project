@@ -2,18 +2,18 @@ package com.napier.sem.models;
 
 public class Population{
     private final String areaName;
-    private final Integer totalPopulation;
-    private final Integer populationInCities;
-    private final Integer populationOutCities;
+    private final Long totalPopulation;
+    private final Long populationInCities;
+    private final Long populationOutCities;
 
-    public Population(String areaName, Integer totalPopulation) {
+    public Population(String areaName, Long totalPopulation) {
         this.areaName = areaName;
         this.totalPopulation = totalPopulation;
         this.populationInCities = null;
         this.populationOutCities = null;
     }
 
-    public Population(String areaName, Integer totalPopulation,  Integer populationInCities, Integer populationOutCities) {
+    public Population(String areaName, Long totalPopulation,  Long populationInCities, Long populationOutCities) {
         this.areaName = areaName;
         this.totalPopulation = totalPopulation;
         this.populationInCities =  populationInCities;
@@ -24,15 +24,15 @@ public class Population{
         return areaName;
     }
 
-    public Integer getTotalPopulation() {
+    public Long getTotalPopulation() {
         return totalPopulation;
     }
 
-    public Integer getPopulationInCities() {
+    public Long getPopulationInCities() {
         return populationInCities;
     }
 
-    public Integer getPopulationOutCities() {
+    public Long getPopulationOutCities() {
         return populationOutCities;
     }
 

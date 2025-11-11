@@ -24,10 +24,9 @@ public class PopulationReport {
                    populationList.add(
                            new Population(
                                    resultSet.getString("Continent"),
-                                   resultSet.getInt("total_population"),
-                                   resultSet.getInt("population_in_cities"),
-                                   resultSet.getInt("population_not_in_cities"
-                                   )
+                                   resultSet.getLong("total_population"),
+                                   resultSet.getLong("population_in_cities"),
+                                   resultSet.getLong("population_not_in_cities")
                            )
                    );
                }
