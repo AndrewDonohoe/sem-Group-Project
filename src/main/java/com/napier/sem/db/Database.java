@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.function.Function;
 
-public class Database {
+public class Database implements DatabaseInterface {
 
     private final String url;
     private final String username;

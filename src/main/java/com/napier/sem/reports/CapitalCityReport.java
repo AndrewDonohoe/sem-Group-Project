@@ -1,6 +1,15 @@
 package com.napier.sem.reports;
 
+import com.napier.sem.db.DatabaseInterface;
+
 public class CapitalCityReport {
+
+    private final DatabaseInterface database;
+
+    public CapitalCityReport(DatabaseInterface database){
+        this.database = database;
+    }
+
     public String capitalCitiesInWorldLargestToSmallest() {
         return null;
     }
