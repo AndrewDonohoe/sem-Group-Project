@@ -1,6 +1,10 @@
 package com.napier.sem.reports;
 
 import com.napier.sem.db.DatabaseInterface;
+import com.napier.sem.db.SqlQueries;
+import com.napier.sem.models.Population;
+
+import java.util.ArrayList;
 
 public class PopulationReport {
 
@@ -11,7 +15,30 @@ public class PopulationReport {
     }
 
     public String populationOfPeopleInAndOutOfCitiesInEachContinent() {
-        return null;
+
+        ArrayList<Population> populationInCities = database.executeQuery(SqlQueries.populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachContinent,
+                resultSet -> {
+                    ArrayList<Population> populationList = new ArrayList<>();
+           try {
+               while (resultSet.next()) {
+                   populationList.add(
+                           new Population(
+                                   resultSet.getString("Continent"),
+                                   resultSet.getLong("total_population"),
+                                   resultSet.getLong("population_in_cities"),
+                                   resultSet.getLong("population_not_in_cities")
+                           )
+                   );
+               }
+           } catch (Exception e) {
+               System.out.println("Error: " + e.getMessage());
+           }
+           return populationList;
+                }
+        );
+
+        return populationInCities.toString();
+
     }
 
     public String populationOfPeopleInAndOutOfCitiesInEachRegion() {
