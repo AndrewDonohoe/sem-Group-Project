@@ -61,6 +61,9 @@ public class SqlQueries {
 
     // Queries linked with use-case 1
     public static String countryInWorldLargestToSmallestQuery = "SELECT * FROM country ORDER BY population DESC";
-    public static String countryInContinentLargestToSmallestQuery = "SELECT * FROM country WHERE continent = 'Europe' ORDER BY population DESC";
+    public static String countryInContinentLargestToSmallestQuery(String continent){
+         String queryString = "SELECT * FROM country WHERE continent = '" + continent + "' ORDER BY population DESC";
+         return queryString;
+    }
 
 }

@@ -33,7 +33,7 @@ public class CountryReportTest {
     @Test
     public void testCountriesInContinentSmallestToLargest() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.countriesInContinentSmallestToLargest("Europe");
+        String result = countryReport.countriesInContinentSmallestToLargest("South America");
         assertNotNull(result);
         assertNotEquals("", result);
     }
