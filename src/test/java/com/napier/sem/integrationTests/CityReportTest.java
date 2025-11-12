@@ -9,10 +9,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+/**
+ * The CityReportTest class contains tests for each cityReport
+ */
 public class CityReportTest {
 
+    // This is the database connection, but it's stored as an interface
+    // That means we can pass in either the real database or a mock one for testing
     static DatabaseInterface db;
 
+    /**
+     * before all the other tests happen this will run
+     * Initialises the database connection
+     */
     @BeforeAll
     static void init() {
         db = new Database(
@@ -22,6 +31,12 @@ public class CityReportTest {
         );
     }
 
+    /**
+     * test to test if the citiesInWorldLargestToSmallest function works
+     * we connect to the database, get the result of the function
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testCitiesInWorldLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
@@ -30,6 +45,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the citiesInContinentLargestToSmallest function works
+     * we connect to the database, get the result of the function
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testCitiesInContinentLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
@@ -38,6 +59,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the citiesInRegionLargestToSmallest function works
+     * we connect to the database, get the result of the function
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testCitiesInRegionLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
@@ -46,6 +73,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the citiesInCountryLargestToSmallest function works
+     * we connect to the database, get the result of the function
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testCitiesInCountryLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
@@ -54,6 +87,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the citiesInDistrictLargestToSmallest function works
+     * we connect to the database, get the result of the function
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testCitiesInDistrictLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
@@ -62,6 +101,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the topPopulatedCitiesInWorld function works
+     * we connect to the database, get the result of the function passing in 10 as an arbitrary number
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testTopPopulatedCitiesInWorld() {
         CityReport cityReport = new CityReport(db);
@@ -70,6 +115,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the topPopulatedCitiesInContinent function works
+     * we connect to the database, get the result of the function passing in 10 as an arbitrary number
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testTopPopulatedCitiesInContinent() {
         CityReport cityReport = new CityReport(db);
@@ -78,6 +129,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the topPopulatedCitiesInRegion function works
+     * we connect to the database, get the result of the function passing in 10 as an arbitrary number
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testTopPopulatedCitiesInRegion() {
         CityReport cityReport = new CityReport(db);
@@ -86,6 +143,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the topPopulatedCitiesInCountry function works
+     * we connect to the database, get the result of the function passing in 10 as an arbitrary number
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testTopPopulatedCitiesInCountry() {
         CityReport cityReport = new CityReport(db);
@@ -94,6 +157,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     * test to test if the topPopulatedCitiesInCountry function works
+     * we connect to the database, get the result of the function passing in 10 as an arbitrary number
+     * and to test that this world we check if the result is not null
+     * and that the result is not an empty string
+     */
     @Test
     public void testTopPopulatedCitiesInDistrict() {
         CityReport cityReport = new CityReport(db);

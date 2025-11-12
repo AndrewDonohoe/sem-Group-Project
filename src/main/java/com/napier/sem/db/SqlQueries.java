@@ -64,6 +64,14 @@ public class SqlQueries {
 
     // Queries linked with use-case 1
     public static String countryInWorldLargestToSmallestQuery = "SELECT * FROM country ORDER BY population DESC";
+
+    /**
+     * small function to create a query string to get all the countries in a specific continent
+     * ordered by largest to smallest population
+     * with the continent to filter by being inputted
+     * @param continent the continent which you want to filter by
+     * @return queryString
+     */
     public static String countryInContinentLargestToSmallestQuery(String continent){
          String queryString = "SELECT * FROM country WHERE continent = '" + continent + "' ORDER BY population DESC";
          return queryString;
