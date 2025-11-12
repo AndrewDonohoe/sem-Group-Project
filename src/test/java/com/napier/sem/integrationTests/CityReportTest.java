@@ -31,33 +31,33 @@ public class CityReportTest {
     }
 
     @Test
-    public void testCitiesInContinentSmallestToLargest() {
+    public void testCitiesInContinentLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
-        String result = cityReport.citiesInContinentSmallestToLargest();
+        String result = cityReport.citiesInContinentLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }
 
     @Test
-    public void testCitiesInRegionSmallestToLargest() {
+    public void testCitiesInRegionLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
-        String result = cityReport.citiesInRegionSmallestToLargest();
+        String result = cityReport.citiesInRegionLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }
 
     @Test
-    public void testCitiesInCountrySmallestToLargest() {
+    public void testCitiesInCountryLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
-        String result = cityReport.citiesInCountrySmallestToLargest();
+        String result = cityReport.citiesInCountryLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }
 
     @Test
-    public void testCitiesInDistrictLargestToLargest() {
+    public void testCitiesInDistrictLargestToSmallest() {
         CityReport cityReport = new CityReport(db);
-        String result = cityReport.citiesInDistrictLargestToLargest();
+        String result = cityReport.citiesInDistrictLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }

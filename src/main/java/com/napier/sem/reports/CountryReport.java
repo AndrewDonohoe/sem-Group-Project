@@ -6,19 +6,36 @@ import com.napier.sem.models.Country;
 
 import java.util.ArrayList;
 
+/**
+ * The CountryReport class is responsible for creating different types
+ * of country-related reports by getting data from the database.
+ */
 public class CountryReport {
 
     private final DatabaseInterface database;
 
+    /**
+     * Constructor that receives a database connection (or mock database).
+     * This allows the class to fetch data without knowing how the database works.
+     */
     public CountryReport(DatabaseInterface database){
         this.database = database;
     }
 
+    /**
+     * Gets a list of all countries in the world from largest to smallest
+     * (currently not implemented)
+     */
     public String countriesInWorldLargestToSmallest() {
         return null;
     }
 
-    public String countriesInContinentSmallestToLargest(String continent) {
+    /**
+     * Gets the countries in the inputted continent from largest to smallest
+     * @param continent the name of the continent which we are getting countries from
+     * @return A string version of the list of Country objects
+     */
+    public String countriesInContinentLargestToSmallest(String continent) {
 
         ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.countryInContinentLargestToSmallestQuery(continent),
             resultSet -> {
@@ -45,18 +62,37 @@ public class CountryReport {
         return countriesInContinent.toString();
     }
 
-    public String countriesInRegionSmallestToLargest() {
+    /**
+     * Gets a list of all countries in a region which is inputted from largest to smallest
+     * (currently not implemented)
+     */
+    public String countriesInRegionLargestToSmallest() {
         return null;
     }
 
+    /**
+     * Gets a list of n countries in the world
+     * @param n is the number of countries which are to be displayed
+     * (currently not implemented)
+     */
     public String topPopulatedCountriesInWorld(int n) {
         return null;
     }
 
+    /**
+     * Gets a list of n countries in a continent which is inputted
+     * @param n is the number of countries which are to be displayed
+     * (currently not implemented)
+     */
     public String topPopulatedCountriesInContinent(int n) {
         return null;
     }
 
+    /**
+     * Gets a list of n countries in a region which is inputted
+     * @param n is the number of countries which are to be displayed
+     * (currently not implemented)
+     */
     public String topPopulatedCountriesInRegion(int n) {
         return null;
     }

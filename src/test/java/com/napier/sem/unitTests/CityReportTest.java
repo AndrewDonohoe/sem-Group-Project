@@ -8,19 +8,19 @@ public class CityReportTest {
     }
 
     @Test
-    public void testCitiesInContinentSmallestToLargest() {
+    public void testCitiesInContinentLargestToSmallest() {
     }
 
     @Test
-    public void testCitiesInRegionSmallestToLargest() {
+    public void testCitiesInRegionLargestToSmallest() {
     }
 
     @Test
-    public void testCitiesInCountrySmallestToLargest() {
+    public void testCitiesInCountryLargestToSmallest() {
     }
 
     @Test
-    public void testCitiesInDistrictLargestToLargest() {
+    public void testCitiesInDistrictLargestToSmallest() {
     }
 
     @Test

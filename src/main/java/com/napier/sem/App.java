@@ -100,7 +100,7 @@ public class App
         System.out.println(result);
 
         CountryReport countryReport = new CountryReport(db);
-        String countryReportResult = countryReport.countriesInContinentSmallestToLargest("South America");
+        String countryReportResult = countryReport.countriesInContinentLargestToSmallest("South America");
         System.out.println("Country in south america report output: ");
         System.out.println(countryReportResult);
 

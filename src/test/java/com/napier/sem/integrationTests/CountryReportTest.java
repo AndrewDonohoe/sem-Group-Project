@@ -31,17 +31,17 @@ public class CountryReportTest {
     }
 
     @Test
-    public void testCountriesInContinentSmallestToLargest() {
+    public void testCountriesInContinentLargestToSmallest() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.countriesInContinentSmallestToLargest("South America");
+        String result = countryReport.countriesInContinentLargestToSmallest("South America");
         assertNotNull(result);
         assertNotEquals("", result);
     }
 
     @Test
-    public void testCountriesInRegionSmallestToLargest() {
+    public void testCountriesInRegionLargestToSmallest() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.countriesInRegionSmallestToLargest();
+        String result = countryReport.countriesInRegionLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }

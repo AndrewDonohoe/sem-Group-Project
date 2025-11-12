@@ -30,17 +30,17 @@ public class CapitalCityReportTest {
     }
 
     @Test
-    public void testCapitalCitiesInContinentSmallestToLargest() {
+    public void testCapitalCitiesInContinentLargestToSmallest() {
         CapitalCityReport capitalCityReport = new CapitalCityReport(db);
-        String result = capitalCityReport.capitalCitiesInContinentSmallestToLargest();
+        String result = capitalCityReport.capitalCitiesInContinentLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }
 
     @Test
-    public void testCapitalCitiesInRegionSmallestToLargest() {
+    public void testCapitalCitiesInRegionLargestToSmallest() {
         CapitalCityReport capitalCityReport = new CapitalCityReport(db);
-        String result = capitalCityReport.capitalCitiesInRegionSmallestToLargest();
+        String result = capitalCityReport.capitalCitiesInRegionLargestToSmallest();
         assertNotNull(result);
         assertNotEquals("", result);
     }

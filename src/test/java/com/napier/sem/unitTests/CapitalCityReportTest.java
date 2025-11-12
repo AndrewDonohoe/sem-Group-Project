@@ -1,6 +1,5 @@
 package com.napier.sem.unitTests;
 
-import com.napier.sem.db.Database;
 import com.napier.sem.db.DatabaseInterface;
 import com.napier.sem.reports.CapitalCityReport;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,12 +26,12 @@ public class CapitalCityReportTest {
     }
 
     @Test
-    public void testCapitalCitiesInContinentSmallestToLargest() {
+    public void testCapitalCitiesInContinentLargestToSmallest() {
 
     }
 
     @Test
-    public void testCapitalCitiesInRegionSmallestToLargest() {
+    public void testCapitalCitiesInRegionLargestToSmallest() {
 
     }
 

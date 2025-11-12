@@ -92,17 +92,34 @@ public class PopulationReport {
 
     }
 
+    /**
+     * Gets the population of people who live inside and outside cities
+     * for each region.
+     * (currently not implemented)
+     */
     public String populationOfPeopleInAndOutOfCitiesInEachRegion() {
         return null;
     }
 
+    /**
+     * Gets the population of people who live inside and outside cities
+     * for each country.
+     * (currently not implemented)
+     */
     public String populationOfPeopleInAndOutOfCitiesInEachCountry() {
         return null;
     }
 
+    /**
+     * Gets the population of the given area
+     * If the area is anything other than world they then need to enter the name of the area
+     * (i.e., Africa for Continent)
+     * (currently not implemented)
+     * @param area name of area to check (World, Continent, Region, Country, District, City)
+     */
     public String populationOfArea(String area) {
         if (area.equals("World")) {
-            System.out.println("Area is World");
+
         } else if (area.equals("Continent")) {
 
         } else if (area.equals("Region")) {
@@ -117,6 +134,11 @@ public class PopulationReport {
         return null;
     }
 
+    /**
+     * Displays the population of people who speak different languages
+     * from largest to smallest
+     * (currently not implemented)
+     */
     public String populationOfPeopleWhoSpeakDifferentLanguages() {
         return null;
     }
