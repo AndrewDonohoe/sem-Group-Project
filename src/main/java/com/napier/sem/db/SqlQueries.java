@@ -1,5 +1,8 @@
 package com.napier.sem.db;
 
+/**
+ * A class which contains a bunch of public variable strings or public functions for each SQL query
+ */
 public class SqlQueries {
 
     public static String exampleQuery = "SELECT * FROM city ORDER BY population DESC";
