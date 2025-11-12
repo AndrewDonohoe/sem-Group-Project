@@ -1,4 +1,4 @@
 FROM amazoncorretto:17
-COPY ./target/seMethodsGroupTask-2.0-SNAPSHOT-jar-with-dependencies.jar /tmp
+COPY ./target/seMethodsGroupTask-3.0-SNAPSHOT-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "seMethodsGroupTask-2.0-SNAPSHOT-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "seMethodsGroupTask-3.0-SNAPSHOT-jar-with-dependencies.jar"]
