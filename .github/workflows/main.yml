@@ -12,7 +12,7 @@ jobs:
           submodules: recursive
 
       - name: Run tests (Docker Compose)
-        run: docker compose run --rm tests
+        run: docker compose up --abort-on-container-exit tests
 
   build:
     name: Group Project action
