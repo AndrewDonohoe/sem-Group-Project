@@ -62,7 +62,9 @@ public class SqlQueries {
     ORDER BY total_population DESC;
     """;
 
+    // ----------------------------------------
     // Queries linked with use-case 1
+    // ----------------------------------------
     public static String countryInWorldLargestToSmallestQuery = "SELECT * FROM country ORDER BY population DESC";
 
     /**
@@ -77,4 +79,26 @@ public class SqlQueries {
          return queryString;
     }
 
+    public static String countryInRegionLargestToSmallestQuery(String region){
+        String queryString = "SELECT * FROM country WHERE region = '" + region + "' ORDER BY population DESC";
+        return queryString;
+    }
+
+    // ----------------------------------------
+    // Queries linked with use-case 2
+    // ----------------------------------------
+    public static String topPopulatedCountriesInWorldQuery(int n) {
+        String queryString = "SELECT * FROM country ORDER BY population DESC LIMIT " + n;
+        return queryString;
+    }
+
+    public static String topPopulatedCountriesInContinentQuery(String continent, int n) {
+        String queryString = "SELECT * FROM country WHERE continent = '" +  continent + "' ORDER BY population DESC LIMIT " + n;
+        return queryString;
+    }
+
+    public static String topPopulatedCountriesInRegionQuery(String region, int n) {
+        String queryString = "SELECT * FROM country WHERE region = '" + region + "' ORDER BY population DESC LIMIT " + n;
+        return queryString;
+    }
 }
