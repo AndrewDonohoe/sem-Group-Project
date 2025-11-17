@@ -77,4 +77,33 @@ public class SqlQueries {
          return queryString;
     }
 
+    /** tylers sql query1
+     * @param world
+     * @return squeryString
+     */
+    public static String allCapitalCitiesInWorldLargestToSmallestQuery(String world) {
+        String queryString = "SELECT * FROM capitalCities WHERE world = '" + world + "' ORDER BY population DESC";
+        return queryString;
+    }
+
+    public static String capitalCitiesInContinentLargestToSmallestQuery(String continent){
+        String queryString = "SELECT * FROM capitalCities WHERE continent = '" + continent + "' ORDER BY population DESC";
+        return queryString;
+    }
+
+    public static String capitalCitiesInRegionLargestToSmallestQuery(String region){
+        String queryString = "SELECT * FROM capitalCities WHERE region = '" + region + "'ORDER BY population DESC";
+        return queryString;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
