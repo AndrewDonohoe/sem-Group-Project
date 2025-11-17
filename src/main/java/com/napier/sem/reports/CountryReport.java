@@ -28,7 +28,7 @@ public class CountryReport {
      */
     public String countriesInWorldLargestToSmallest() {
 
-        ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.countryInWorldLargestToSmallestQuery,
+        ArrayList<Country> countriesInWorld = database.executeQuery(SqlQueries.countryInWorldLargestToSmallestQuery,
                 resultSet -> {
                     ArrayList<Country> countryList = new ArrayList<>();
                     try {
@@ -50,7 +50,7 @@ public class CountryReport {
                     return countryList;
                 }
         );
-        return countriesInContinent.toString();
+        return countriesInWorld.toString();
 
     }
 
@@ -92,7 +92,7 @@ public class CountryReport {
      */
     public String countriesInRegionLargestToSmallest(String region) {
 
-        ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.countryInRegionLargestToSmallestQuery(region),
+        ArrayList<Country> countriesInRegion = database.executeQuery(SqlQueries.countryInRegionLargestToSmallestQuery(region),
                 resultSet -> {
                     ArrayList<Country> countryList = new ArrayList<>();
                     try {
@@ -114,7 +114,7 @@ public class CountryReport {
                     return countryList;
                 }
         );
-        return countriesInContinent.toString();
+        return countriesInRegion.toString();
     }
 
     /**
@@ -124,7 +124,7 @@ public class CountryReport {
      */
     public String topPopulatedCountriesInWorld(int n) {
 
-        ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.topPopulatedCountriesInWorldQuery(n),
+        ArrayList<Country> topPopuCountriesInWorld = database.executeQuery(SqlQueries.topPopulatedCountriesInWorldQuery(n),
                 resultSet -> {
                     ArrayList<Country> countryList = new ArrayList<>();
                     try {
@@ -146,7 +146,7 @@ public class CountryReport {
                     return countryList;
                 }
         );
-        return countriesInContinent.toString();
+        return topPopuCountriesInWorld.toString();
 
     }
 
@@ -157,7 +157,7 @@ public class CountryReport {
      */
     public String topPopulatedCountriesInContinent(String continent, int n) {
 
-        ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.topPopulatedCountriesInContinentQuery(continent, n),
+        ArrayList<Country> topPopuCountriesInContinent = database.executeQuery(SqlQueries.topPopulatedCountriesInContinentQuery(continent, n),
                 resultSet -> {
                     ArrayList<Country> countryList = new ArrayList<>();
                     try {
@@ -179,7 +179,7 @@ public class CountryReport {
                     return countryList;
                 }
         );
-        return countriesInContinent.toString();
+        return topPopuCountriesInContinent.toString();
 
     }
 
@@ -190,7 +190,7 @@ public class CountryReport {
      */
     public String topPopulatedCountriesInRegion(String region, int n) {
 
-        ArrayList<Country> countriesInContinent = database.executeQuery(SqlQueries.topPopulatedCountriesInRegionQuery(region, n),
+        ArrayList<Country> topPopuCountriesInRegion = database.executeQuery(SqlQueries.topPopulatedCountriesInRegionQuery(region, n),
                 resultSet -> {
                     ArrayList<Country> countryList = new ArrayList<>();
                     try {
@@ -212,7 +212,7 @@ public class CountryReport {
                     return countryList;
                 }
         );
-        return countriesInContinent.toString();
+        return topPopuCountriesInRegion.toString();
     }
 
 }
