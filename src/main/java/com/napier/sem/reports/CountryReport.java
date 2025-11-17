@@ -27,7 +27,31 @@ public class CountryReport {
      * (currently not implemented)
      */
     public String countriesInWorldLargestToSmallest() {
-        return null;
+
+        ArrayList<Country> countriesInWorld = database.executeQuery(SqlQueries.countryInWorldLargestToSmallestQuery,
+                resultSet -> {
+                    ArrayList<Country> countryList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            countryList.add(
+                                    new Country(
+                                            resultSet.getString("Code"),
+                                            resultSet.getString("Name"),
+                                            resultSet.getString("Continent"),
+                                            resultSet.getString("Region"),
+                                            resultSet.getInt("Population"),
+                                            resultSet.getInt("Capital")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return countryList;
+                }
+        );
+        return countriesInWorld.toString();
+
     }
 
     /**
@@ -66,8 +90,31 @@ public class CountryReport {
      * Gets a list of all countries in a region which is inputted from largest to smallest
      * (currently not implemented)
      */
-    public String countriesInRegionLargestToSmallest() {
-        return null;
+    public String countriesInRegionLargestToSmallest(String region) {
+
+        ArrayList<Country> countriesInRegion = database.executeQuery(SqlQueries.countryInRegionLargestToSmallestQuery(region),
+                resultSet -> {
+                    ArrayList<Country> countryList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            countryList.add(
+                                    new Country(
+                                            resultSet.getString("Code"),
+                                            resultSet.getString("Name"),
+                                            resultSet.getString("Continent"),
+                                            resultSet.getString("Region"),
+                                            resultSet.getInt("Population"),
+                                            resultSet.getInt("Capital")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return countryList;
+                }
+        );
+        return countriesInRegion.toString();
     }
 
     /**
@@ -76,7 +123,31 @@ public class CountryReport {
      * (currently not implemented)
      */
     public String topPopulatedCountriesInWorld(int n) {
-        return null;
+
+        ArrayList<Country> topPopuCountriesInWorld = database.executeQuery(SqlQueries.topPopulatedCountriesInWorldQuery(n),
+                resultSet -> {
+                    ArrayList<Country> countryList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            countryList.add(
+                                    new Country(
+                                            resultSet.getString("Code"),
+                                            resultSet.getString("Name"),
+                                            resultSet.getString("Continent"),
+                                            resultSet.getString("Region"),
+                                            resultSet.getInt("Population"),
+                                            resultSet.getInt("Capital")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return countryList;
+                }
+        );
+        return topPopuCountriesInWorld.toString();
+
     }
 
     /**
@@ -84,8 +155,32 @@ public class CountryReport {
      * @param n is the number of countries which are to be displayed
      * (currently not implemented)
      */
-    public String topPopulatedCountriesInContinent(int n) {
-        return null;
+    public String topPopulatedCountriesInContinent(String continent, int n) {
+
+        ArrayList<Country> topPopuCountriesInContinent = database.executeQuery(SqlQueries.topPopulatedCountriesInContinentQuery(continent, n),
+                resultSet -> {
+                    ArrayList<Country> countryList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            countryList.add(
+                                    new Country(
+                                            resultSet.getString("Code"),
+                                            resultSet.getString("Name"),
+                                            resultSet.getString("Continent"),
+                                            resultSet.getString("Region"),
+                                            resultSet.getInt("Population"),
+                                            resultSet.getInt("Capital")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return countryList;
+                }
+        );
+        return topPopuCountriesInContinent.toString();
+
     }
 
     /**
@@ -93,7 +188,31 @@ public class CountryReport {
      * @param n is the number of countries which are to be displayed
      * (currently not implemented)
      */
-    public String topPopulatedCountriesInRegion(int n) {
-        return null;
+    public String topPopulatedCountriesInRegion(String region, int n) {
+
+        ArrayList<Country> topPopuCountriesInRegion = database.executeQuery(SqlQueries.topPopulatedCountriesInRegionQuery(region, n),
+                resultSet -> {
+                    ArrayList<Country> countryList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            countryList.add(
+                                    new Country(
+                                            resultSet.getString("Code"),
+                                            resultSet.getString("Name"),
+                                            resultSet.getString("Continent"),
+                                            resultSet.getString("Region"),
+                                            resultSet.getInt("Population"),
+                                            resultSet.getInt("Capital")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return countryList;
+                }
+        );
+        return topPopuCountriesInRegion.toString();
     }
+
 }
