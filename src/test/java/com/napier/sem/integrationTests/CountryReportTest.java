@@ -68,7 +68,7 @@ public class CountryReportTest {
     @Test
     public void testCountriesInRegionLargestToSmallest() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.countriesInRegionLargestToSmallest();
+        String result = countryReport.countriesInRegionLargestToSmallest("Eastern Europe");
         assertNotNull(result);
         assertNotEquals("", result);
     }
@@ -96,7 +96,7 @@ public class CountryReportTest {
     @Test
     public void testTopPopulatedCountriesInContinent() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.topPopulatedCountriesInContinent(10);
+        String result = countryReport.topPopulatedCountriesInContinent("South America",10);
         assertNotNull(result);
         assertNotEquals("", result);
     }
@@ -110,7 +110,7 @@ public class CountryReportTest {
     @Test
     public void testTopPopulatedCountriesInRegion() {
         CountryReport countryReport = new CountryReport(db);
-        String result = countryReport.topPopulatedCountriesInRegion(10);
+        String result = countryReport.topPopulatedCountriesInRegion("Eastern Europe",10);
         assertNotNull(result);
         assertNotEquals("", result);
     }
