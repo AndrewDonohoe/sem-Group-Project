@@ -154,7 +154,7 @@ public class SqlQueries {
 
 
     /**
-     * Tyler's sql query5
+     * Tyler's sql query6
      * searching for top n populated cities in a specific region
      * n being inputted by the user
      * ordered from largest to smallest
