@@ -4,6 +4,8 @@ services:
   # Build app from Dockerfile in same folder
   app:
     build: .
+    depends_on:
+      - db
 
   # Build the db as name db from the Dockerfile in the db folder
   # exposing the port if we want to run code outside a container
@@ -11,3 +13,12 @@ services:
     build: db/.
     ports:
       - "33060:3306"
+
+  tests:
+    image: maven:3.9-eclipse-temurin-17
+    working_dir: /app
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    command: mvn test
