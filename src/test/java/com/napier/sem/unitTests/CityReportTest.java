@@ -4,6 +4,13 @@ import com.napier.sem.models.City;
 import com.napier.sem.reports.CityReport;
 import org.junit.jupiter.api.Test;
 
+
+/**
+ *Tests the citiesInWorldLargestToSmallest() method to ensure it returns
+ * a non-null and non-empty result
+ * This checks that the method successfully produces output and does not fail
+ * when interacting with the inputs
+ */
 public class CityReportTest {
     @Test
     public void testCitiesInWorldLargestToSmallest() {
@@ -13,6 +20,13 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+
+    /**
+     *Tests the citiesInContinentLargestToSmallest() method to ensure it returns
+     * a non-null and non-empty result.
+     * This checks that the method successfully produces output and does not fail
+     * when interacting with the inputs.
+     */
     @Test
     public void testCitiesInContinentLargestToSmallest() {
         CityReport = cityReport = new CityReport(db);
@@ -21,6 +35,12 @@ public class CityReportTest {
         assertNotEquals("", result);
     }
 
+    /**
+     *Tests the citiesInRegionLargestToSmallest() method to ensure it returns
+     * a non-null and non-empty result.
+     * This checks that the method successfully produces output and does not fail
+     * when interacting with the inputs.
+     */
     @Test
     public void testCitiesInRegionLargestToSmallest() {
         {
@@ -31,6 +51,13 @@ public class CityReportTest {
         }
     }
 
+
+    /**
+     *Tests the citiesInCountryLargestToSmallest() method to ensure it returns
+     * a non-null and non-empty result
+     * This checks that the method successfully produces output and does not fail
+     * when interacting with the inputs
+     */
     @Test
     public void testCitiesInCountryLargestToSmallest() {
         {
@@ -41,6 +68,12 @@ public class CityReportTest {
         }
     }
 
+    /**
+     *Tests the citiesInDistrictLargestToSmallest() method to ensure it returns
+     * a non-null and non-empty result
+     * This checks that the method successfully produces output and does not fail
+     * when interacting with the inputs
+     */
     @Test
     public void testCitiesInDistrictLargestToSmallest() {
         {
