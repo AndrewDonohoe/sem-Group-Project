@@ -1,6 +1,11 @@
 package com.napier.sem.reports;
 
 import com.napier.sem.db.DatabaseInterface;
+import com.napier.sem.db.SqlQueries;
+import com.napier.sem.models.City;
+import com.napier.sem.models.Country;
+
+import java.util.ArrayList;
 
 /**
  * The CityReport class is responsible for creating different types
@@ -23,7 +28,27 @@ public class CityReport {
      * (currently not implemented)
      */
     public String citiesInWorldLargestToSmallest() {
-        return null;
+        ArrayList<City> citiesInWorld = database.executeQuery(SqlQueries.citiesInWorldLargestToSmallestQuery,
+                resultSet -> {
+                    ArrayList<City> citiesList = new ArrayList<>();
+                    try {
+                        while (resultSet.next()){
+                            citiesList.add(
+                                    new City(
+                                            resultSet.getString("Madrid"),
+                                            resultSet.getString("Europe"),
+                                            resultSet.getString("southwestern Europe"),
+                                            resultSet.getInt("3,422,416")
+                                    )
+                            );
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                    return citiesList;
+                }
+        );
+        return citiesInWorld.toString();
     }
 
     /**
