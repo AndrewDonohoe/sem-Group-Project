@@ -7,6 +7,15 @@ public class SqlQueries {
 
     public static String exampleQuery = "SELECT * FROM city ORDER BY population DESC";
 
+
+    /**
+     * sorting through the population of people in each continent
+     * finding if they live in cities or don't
+     * showing 2 ouput's(the population of the city's, and the population that arent living in cities)
+     * ordered from largest to smallest
+     * @param continent what were filtering through
+     * @return string
+     */
     public static String populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachContinent = """
             SELECT
             c.Continent,
@@ -23,6 +32,8 @@ public class SqlQueries {
             GROUP BY c.Continent
             ORDER BY total_population DESC;
             """;
+
+
 
 
     public static String populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachRegion = """
@@ -173,7 +184,7 @@ public class SqlQueries {
 
 
     /**
-     * Tyler's sql query5
+     * Tyler's sql query6
      * searching for top n populated cities in a specific region
      * n being inputted by the user
      * ordered from largest to smallest
