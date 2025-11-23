@@ -104,5 +104,9 @@ public class App
         System.out.println("Country in south america report output: ");
         System.out.println(countryReportResult);
 
+        String countryReportResult1 = countryReport.countriesInWorldLargestToSmallest();
+        System.out.println("countriesInWorldLargestToSmallest: ");
+        System.out.println(countryReportResult1);
+
     }
 }
