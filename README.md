@@ -11,10 +11,10 @@
 - Create Code of Conduct
 - Setup Database
 - Create Kanban Boards
-- Scedule Sprints
+- Schedule Sprints
 - Create Class Structure To Store The Data From The SQL
 - Retrieve The Data From The Database
-- Create Methods To Create the Reports The Organistation Has Asked For
+- Create Methods To Create the Reports The Organisation Has Asked For
 - Create Tests
 - Release
 - Project integrated with zube.io
