@@ -7,6 +7,18 @@ public class SqlQueries {
 
     public static String exampleQuery = "SELECT * FROM city ORDER BY population DESC";
 
+    /*
+    Selecting
+    Show results grouped by continent
+    Total population of all countries in the continent
+    Total population living in cities (use 0 if a country has no cities)
+    Total population living outside cities
+    Using LEFT JOIN to SUM the population of all cities within each country
+    from city as ci
+    Match each country to its total city population
+    GROUP BY, aggregate results per continent
+    ORDER BY, show continents with highest population first
+     */
     public static String populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachContinent = """
     SELECT
     c.Continent,
@@ -24,6 +36,18 @@ public class SqlQueries {
     ORDER BY total_population DESC;
     """;
 
+    /*
+    Selecting
+    Show results grouped by region
+    Total population of all countries in the region
+    Total population living in cities (use 0 if a country has no cities)
+    Total population living outside cities
+    Using LEFT JOIN to find the total population of all cities within each country
+    GROUP BY, one row per country with its total city population
+    Matching country to its summed city population
+    GROUP BY, aggregate results for each region
+    ORDER BY, shows regions with highest population first
+     */
 
     public static String populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachRegion = """
     SELECT
@@ -42,6 +66,21 @@ public class SqlQueries {
     GROUP BY c.Region
     ORDER BY total_population DESC;
     """;
+
+    /*
+    Selecting
+    Country code (primary key of the country table)
+    Country name
+    Continent the country belongs to
+    Region within the continent
+    Total population of the country
+    Total people living in all cities of the country (0 if no cities recorded)
+    People who live outside cities
+    Using LEFT JOIN to find the sum of population of all cities per country
+    GROUP BY, one row per country with its total city population
+    Link each country to its city population total
+    ORDER BY, shows the biggest countries at the top
+     */
 
 
     public static String populationOfPeoplePeopleLivingInCitiesAndPeopleNotLivingInCitiesInEachCountry = """
@@ -62,6 +101,17 @@ public class SqlQueries {
     ORDER BY total_population DESC;
     """;
 
+    /*
+    Selecting
+    The language we are analysing
+    Estimated number of speakers for that language
+    and the country population × % of population speaking the language
+    Percentage of the world's total population that speaks this language (2 decimals)
+    Using JOIN to match each language entry with its country population
+    Only analyse these five major global languages
+    GROUP BY, aggregate totals per language
+    ORDER BY, show the most widely spoken languages first
+     */
 
     public static String populationOfPeopleWhoSpeakDifferentLanguagesQuery = """
             SELECT  cl.Language,
