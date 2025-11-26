@@ -1,6 +1,9 @@
 name: A workflow for my Hello World App
 on: push
 
+permissions:
+  contents: write
+
 jobs:
   Tests:
     name: Tests
@@ -29,10 +32,12 @@ jobs:
         run: mvn package -DskipTests
       - name: Run App (Docker Compose)
         run: docker compose up --build --abort-on-container-exit app
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Publish JAR to GitHub Release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
-          automatic_release_tag: "latest"
+          automatic_release_tag: latest
           files: |
-            ./target/*.jar
+            ./target/*-jar-with-dependencies.jar

@@ -101,8 +101,14 @@ public class App
 
         CountryReport countryReport = new CountryReport(db);
         String countryReportResult = countryReport.countriesInContinentLargestToSmallest("South America");
-        System.out.println("Country in south america report output: ");
         System.out.println(countryReportResult);
+        System.out.println(countryReportResult);
+
+        PopulationReport populationReport2 = new PopulationReport(db);
+        String popoulation = populationReport2.populationOfPeopleWhoSpeakDifferentLanguages();
+        System.out.println();
+        System.out.println("population of speak different languages per continent output: ");
+        System.out.println(popoulation);
 
         String countryReportResult1 = countryReport.countriesInWorldLargestToSmallest();
         System.out.println("countriesInWorldLargestToSmallest: ");
