@@ -110,5 +110,9 @@ public class App
         System.out.println("population of speak different languages per continent output: ");
         System.out.println(popoulation);
 
+        String countryReportResult1 = countryReport.countriesInWorldLargestToSmallest();
+        System.out.println("countriesInWorldLargestToSmallest: ");
+        System.out.println(countryReportResult1);
+
     }
 }
