@@ -33,7 +33,7 @@ jobs:
       - name: Run App (Docker Compose)
         run: docker compose up --build --abort-on-container-exit app
       - name: Publish JAR to GitHub Release
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
