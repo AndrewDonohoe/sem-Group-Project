@@ -2,6 +2,7 @@ package com.napier.sem.reports;
 
 import com.napier.sem.db.DatabaseInterface;
 import com.napier.sem.db.SqlQueries;
+import com.napier.sem.models.Language;
 import com.napier.sem.models.Population;
 
 import java.util.ArrayList;
@@ -206,22 +207,20 @@ public class PopulationReport {
      * (currently not implemented)
      */
     public String populationOfPeopleWhoSpeakDifferentLanguages() {
-        ArrayList<Population> populationInCities = database.executeQuery(SqlQueries.populationOfPeopleWhoSpeakDifferentLanguagesQuery,
+        ArrayList<Language> population = database.executeQuery(SqlQueries.populationOfPeopleWhoSpeakDifferentLanguagesQuery,
                 resultSet -> {
                     // Create a list to hold the Population objects we’ll build
-                    ArrayList<Population> populationList = new ArrayList<>();
+                    ArrayList<Language> populationList = new ArrayList<>();
                     try {
                         // Go through each row of the query result
                         while (resultSet.next()) {
                             populationList.add(
-                                    // Create a Population object for this continent
-                                    // using the data from the current row
-                                    new Population(
-                                            resultSet.getString("Region"),
-                                            resultSet.getLong("total_population"),
-                                            resultSet.getLong("population_in_cities"),
-                                            resultSet.getLong("population_not_in_cities")
-                                    )
+                                    // Printing out the five most spoken languages of the world and
+                                    // how many that speak the including the percentage of the world using the data from the current row
+                                    new Language(
+                                            resultSet.getString("Language"),
+                                            resultSet.getLong("speakers"),
+                                            resultSet.getDouble("pct_of_world"))
                             );
                         }
                     } catch (Exception e) {
@@ -229,12 +228,12 @@ public class PopulationReport {
                         // print an error message
                         System.out.println("Error: " + e.getMessage());
                     }
-                    // Return the list of Population objects to executeQuery(
+                    // Return the list of population objects to executeQuery(
                     return populationList;
                 });
 
         // Convert the list to a string (for now) and return it.
         // Later, this could be replaced with proper report formatting
-        return populationInCities.toString();
+        return population.toString();
     }
 }
